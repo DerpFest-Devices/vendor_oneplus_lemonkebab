@@ -31,9 +31,9 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/lemonkebab/proprietary/system_ext/framework/com.qti.dpmframework.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/com.qti.dpmframework.jar \
     vendor/oneplus/lemonkebab/proprietary/system_ext/framework/dpmapi.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/dpmapi.jar \
     vendor/oneplus/lemonkebab/proprietary/system_ext/framework/qcrilhook.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/qcrilhook.jar \
-    vendor/oneplus/lemonkebab/proprietary/system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.hardware.alarm-V1.0-java.jar \
     vendor/oneplus/lemonkebab/proprietary/system_ext/lib/com.qualcomm.qti.ant@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/com.qualcomm.qti.ant@1.0.so \
     vendor/oneplus/lemonkebab/proprietary/system_ext/lib/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/com.qualcomm.qti.dpm.api@1.0.so \
+    vendor/oneplus/lemonkebab/proprietary/system_ext/lib/libdiag_system.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libdiag_system.so \
     vendor/oneplus/lemonkebab/proprietary/system_ext/lib/libdpmctmgr.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libdpmctmgr.so \
     vendor/oneplus/lemonkebab/proprietary/system_ext/lib/libdpmfdmgr.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libdpmfdmgr.so \
     vendor/oneplus/lemonkebab/proprietary/system_ext/lib/libdpmframework.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libdpmframework.so \
@@ -169,8 +169,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/lemonkebab/proprietary/vendor/etc/camera/distortion_result.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/distortion_result.bin \
     vendor/oneplus/lemonkebab/proprietary/vendor/etc/camera/model.data:$(TARGET_COPY_OUT_VENDOR)/etc/camera/model.data \
     vendor/oneplus/lemonkebab/proprietary/vendor/etc/camera/segment.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/camera/segment.dlc \
-    vendor/oneplus/lemonkebab/proprietary/vendor/etc/cne/profileSlm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/profileSlm.xml \
-    vendor/oneplus/lemonkebab/proprietary/vendor/etc/cne/slm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/cne/slm.conf \
+    vendor/oneplus/lemonkebab/proprietary/vendor/etc/cne/mwqem.conf:$(TARGET_COPY_OUT_VENDOR)/etc/cne/mwqem.conf \
+    vendor/oneplus/lemonkebab/proprietary/vendor/etc/cne/profileMwqem.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/profileMwqem.xml \
     vendor/oneplus/lemonkebab/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile1.xml \
     vendor/oneplus/lemonkebab/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile2.xml \
     vendor/oneplus/lemonkebab/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile3.xml \
@@ -1294,6 +1294,9 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.pixelworks.hardware.feature@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.pixelworks.hardware.feature@1.0.so \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.data.factory@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.0.so \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.data.factory@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.1.so \
+    vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.data.factory@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.2.so \
+    vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.data.factory@2.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.3.so \
+    vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.data.mwqem@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.mwqem@1.0.so \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.data.slm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.slm@1.0.so \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.gnss@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.0.so \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.gnss@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.1.so \
@@ -1315,10 +1318,12 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.hardware.data.iwlan@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.iwlan@1.0.so \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.hardware.data.latency@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.latency@1.0.so \
+    vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.hardware.data.lce@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.lce@1.0.so \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.qmi@1.0.so \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.hardware.dsp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.dsp@1.0.so \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.hardware.iop@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.iop@1.0.so \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.hardware.iop@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.iop@2.0.so \
+    vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.mwqemadapter@1.0.so \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qccsyshal@1.0.so \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qccvndhal@1.0.so \
@@ -1366,6 +1371,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.imsrtpservice@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@3.0.so \
     vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.latency@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.latency@2.0.so \
+    vendor/oneplus/lemonkebab/proprietary/vendor/lib64/vendor.qti.latency@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.latency@2.1.so \
     vendor/oneplus/lemonkebab/proprietary/vendor/radio/qcril_database/qcril.db:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/qcril.db \
     vendor/oneplus/lemonkebab/proprietary/vendor/radio/qcril_database/upgrade/0_initial.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/0_initial.sql \
     vendor/oneplus/lemonkebab/proprietary/vendor/radio/qcril_database/upgrade/1_version_intro.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/1_version_intro.sql \
